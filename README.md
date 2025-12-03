@@ -4,7 +4,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of CWERNIrevamped is to ...
+The goal of CWERNIrevamped is to re-make the the original CWERNI r-package (), making it compatible with R 4.5 and using best development pratices.
+This includes writing good documentation, proper use of git & github and adding some automated testing. 
 
 ## Installation
 
