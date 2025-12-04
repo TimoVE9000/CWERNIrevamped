@@ -1,11 +1,7 @@
-test_that("multiplication works", {
+test_that("test that testing works, by performing multiplication", {
   expect_equal(2 * 2, 4)
 })
 
-test_that ("hello works", {
-
-  expect_equal (hello(), "Hello, world!")
-})
 
 
 test_that("test generate_spat_abund", {
