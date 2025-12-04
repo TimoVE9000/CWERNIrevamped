@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# RStudio user-specific files
+.Rproj.user/
+.Rhistory
+.RData
