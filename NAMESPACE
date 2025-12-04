@@ -3,3 +3,5 @@
 export(CWRsim)
 export(generate_spat_abund)
 export(nulsim)
+export(nulsimSPEC)
+export(simbvar)
