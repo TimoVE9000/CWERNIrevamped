@@ -7,8 +7,7 @@
 #' @return a vector of species abundances
 #' @export
 #'
-#' @examples
-#' generate_spat_abund(theta = 200,Ivec = rep(40,1),Jvec = c(16000))
+#' @examples generate_spat_abund(theta = 200,Ivec = rep(40,1),Jvec = c(16000))
 
 generate_spat_abund = function(theta,Ivec,Jvec)
 {
