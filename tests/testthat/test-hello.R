@@ -74,3 +74,12 @@ test_that("test simbvarSPEC", {
 
 })
 
+
+
+test_that("test multinulsim", {
+  multinulsim(5, 0.6, 0.1, 16000,generate_spat_abund(theta = 200,Ivec = rep(40,1),Jvec = c(16000)), 2,"nulsim.tiff",  200)
+  expect_true(file.exists("nulsim.tiff"))
+})
+
+
+
