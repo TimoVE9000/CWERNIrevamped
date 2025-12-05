@@ -118,3 +118,4 @@ CWRsimSPEC = function (tmax, b1, d1, b2, d2, m12, m21, k1, abun_original, interv
 
   return(t(keeper))
 }
+
