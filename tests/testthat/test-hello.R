@@ -81,5 +81,9 @@ test_that("test multinulsim", {
   expect_true(file.exists("nulsim.tiff"))
 })
 
+test_that("test multisimbvar", {
+  multisimbvar( 5, 0.6, 0.1, 16000, 0.05,0, 5, generate_spat_abund (theta = 200,Ivec = rep(40,1),Jvec = c(16000)), 2, "bvar.tiff", 200)
+  expect_true(file.exists("bvar.tiff"))
+})
 
 
