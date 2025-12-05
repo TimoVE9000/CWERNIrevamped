@@ -98,8 +98,22 @@ expect_true(file.exists("2simdata_nulsim.csv"))
 expect_true(file.exists("1time_rac_nulsim.tiff"))
 expect_true(file.exists("3time_rac_nulsim.tiff"))
 expect_true(file.exists("5time_rac_nulsim.tiff"))
+expect_true(file.exists("5time_rac_nulsim.tiff"))
 expect_true(file.exists("Trajectory_totalcommsize_nulsim.tiff"))
 })
+
+
+test_that("test multisimbvarSPEC", {
+  multisimbvarSPEC(6, 0.6, 0.1, 16000, 0.05, 0, 5, generate_spat_abund (theta = 200,Ivec = rep(40,1),Jvec = c(16000)),2, 200, c(1,3,5))
+  expect_true(file.exists("1simdata_simbvar.csv"))
+  expect_true(file.exists("2simdata_simbvar.csv"))
+  expect_true(file.exists("1time_rac_simbvar.tiff"))
+  expect_true(file.exists("3time_rac_simbvar.tiff"))
+  expect_true(file.exists("5time_rac_simbvar.tiff"))
+  expect_true(file.exists("Trajectory_totalcommsize_simbvar.tiff"))
+})
+
+
 
 
 
