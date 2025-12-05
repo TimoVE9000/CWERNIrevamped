@@ -1,19 +1,25 @@
 Package: CWERNIrevamped
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Community Wide Evolutionary Rescue Neutral Implementation revamped
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Timo", "van Eldijk",
+      email = "t.j.b.van.eldijk@rug.nl",
       role = c("aut", "cre")
+    ),
+    person(
+      "Rampal", "Etienne",
+      email = "",
+      role = c("aut")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
+Description: Re-make of the CWERNI r-package, improving compatibility (R 4.5) and showcasing best development practices.
+  This package, like the origina simulates community wide evolutionary rescue in a neutral community (i.e. no differences between species).
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
+Imports: SADISA, EntropyEstimation
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
