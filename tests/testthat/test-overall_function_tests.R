@@ -116,4 +116,12 @@ test_that("test multisimbvarSPEC", {
 
 
 
-
+test_that("test multiCWRsimSPEC", {
+  multiCWRsimSPEC(6,0.6 , 0.1, 0.05, 0.1, 0, 0.0005, 16000, generate_spat_abund(theta = 200,Ivec = rep(40,1),Jvec = c(16000)),200, 2, c(1,3,5))
+  expect_true(file.exists("1simdata_CWRsim.csv"))
+  expect_true(file.exists("2simdata_CWRsim.csv"))
+  expect_true(file.exists("1time_rac_CWRsim.tiff"))
+  expect_true(file.exists("3time_rac_CWRsim.tiff"))
+  expect_true(file.exists("5time_rac_CWRsim.tiff"))
+  expect_true(file.exists("Trajectory_totalcommsize_CWRsim.tiff"))
+})
