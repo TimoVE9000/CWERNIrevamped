@@ -91,4 +91,16 @@ test_that("test multiCWRsim", {
   expect_true(file.exists("CWR.tiff"))
 })
 
+test_that("test multinulsimSPEC", {
+multinulsimSPEC(6, 0.6, 0.1, 1600, generate_spat_abund(theta = 200,Ivec = rep(40,1),Jvec = c(16000)), 2, 200, c(1,3,5))
+expect_true(file.exists("1 simdata_nulsim.csv"))
+expect_true(file.exists("2 simdata_nulsim.csv"))
+expect_true(file.exists("1 time_rac_nulsim.tiff"))
+expect_true(file.exists("3 time_rac_nulsim.tiff"))
+expect_true(file.exists("5 time_rac_nulsim.tiff"))
+expect_true(file.exists("5 time_rac_nulsim.tiff"))
+expect_true(file.exists("Trajectory_totalcommsize_nulsim.tiff"))
+})
+
+
 
