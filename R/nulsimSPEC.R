@@ -69,7 +69,7 @@ nulsimSPEC = function (tmax, b1, d1, k1, abun_original, interval, wantedtimes) {
 
       keep=c(tminone,pop[,2]) #store abundances
       keeper=rbind (keeper, keep)
-      print (c(tminone,t,"WANTED"))
+      #print (c(tminone,t,"WANTED"))
       wantedtimescounter=wantedtimescounter+1
 
     }
