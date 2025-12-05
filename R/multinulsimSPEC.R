@@ -27,7 +27,7 @@ multinulsimSPEC=function (tmax, b1, d1, k1, abun_original, nsim ,interval,wanted
   while(counter<=nsim){
     print (counter)
     test=nulsimSPEC(tmax, b1, d1, k1, abun_original, interval, wantedtimes)
-    utils::write.csv(test, file = paste(counter, "simdata_nulsim.csv"))
+    utils::write.csv(test, file = paste(counter, "simdata_nulsim.csv", sep=""))
     counter=counter+1
 
   }
@@ -42,7 +42,7 @@ multinulsimSPEC=function (tmax, b1, d1, k1, abun_original, nsim ,interval,wanted
     racstor=data.frame()
     counter=1
     while(counter<=nsim){
-      MyData <- utils::read.csv(file=paste(counter, "simdata_nulsim.csv"), header=TRUE, sep=",")
+      MyData <- utils::read.csv(file=paste(counter, "simdata_nulsim.csv", sep=""), header=TRUE, sep=",")
       readdata=as.matrix(MyData)
       readdata=readdata[,2:ncol(readdata)]
       readdata=apply(readdata, 2, as.numeric)
@@ -64,7 +64,7 @@ multinulsimSPEC=function (tmax, b1, d1, k1, abun_original, nsim ,interval,wanted
     }
 
 
-    grDevices::tiff(filename=paste(wantedtime,"time_rac_nulsim.tiff"), width = 1000, height = 1000, units = "px", pointsize = 32)
+    grDevices::tiff(filename=paste(wantedtime,"time_rac_nulsim.tiff", sep=""), width = 1000, height = 1000, units = "px", pointsize = 32)
     graphics::par(mfrow=c(1,1))
     graphics::plot(NA , xlab="Species Rank", ylab="Nr of individuals", ylim=c(1,10000), xlim=c(0,(length(abun_original))),log="y", pch = 20, cex = .8 )
 
@@ -102,7 +102,7 @@ multinulsimSPEC=function (tmax, b1, d1, k1, abun_original, nsim ,interval,wanted
 
   counter=1 #cycle .csv files
   while(counter<=nsim){
-    MyData <- utils::read.csv(file=paste(counter, "simdata_nulsim.csv"), header=TRUE, sep=",") #reading in .csv
+    MyData <- utils::read.csv(file=paste(counter, "simdata_nulsim.csv", sep=""), header=TRUE, sep=",") #reading in .csv
     readdata=as.matrix(MyData)
     readdata=readdata[,2:ncol(readdata)]
     readdata=apply(readdata, 2, as.numeric)
