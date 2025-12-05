@@ -74,3 +74,21 @@ test_that("test simbvarSPEC", {
 
 })
 
+
+
+test_that("test multinulsim", {
+  multinulsim(2, 0.6, 0.1, 16000,generate_spat_abund(theta = 200,Ivec = rep(40,1),Jvec = c(16000)), 2,"nulsim.tiff",  200)
+  expect_true(file.exists("nulsim.tiff"))
+})
+
+test_that("test multisimbvar", {
+  multisimbvar( 2, 0.6, 0.1, 16000, 0.05,0, 5, generate_spat_abund (theta = 200,Ivec = rep(40,1),Jvec = c(16000)), 2, "bvar.tiff", 200)
+  expect_true(file.exists("bvar.tiff"))
+})
+
+test_that("test multiCWRsim", {
+  multiCWRsim(2,0.6 , 0.1, 0.05, 0.1, 0, 0.0005, 16000,generate_spat_abund(theta = 200,Ivec = rep(40,1),Jvec = c(16000)), 2, "CWR.tiff", 200)
+  expect_true(file.exists("CWR.tiff"))
+})
+
+
