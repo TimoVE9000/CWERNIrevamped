@@ -63,3 +63,14 @@ test_that("test CWRsimSPEC", {
 })
 
 
+test_that("test simbvarSPEC", {
+  result = simbvarSPEC( 10, 0.6, 0.1, 16000, 0.05,0, 5, generate_spat_abund(theta = 200,Ivec = rep(40,1),Jvec = c(16000)),200,c(1,3,5))
+  expect_true (is.matrix(result))
+  expect_true(max (result[1,]) >= 10-0.1 && max (result[1,]) <= 10)
+  expect_true(min (result[1,])==0)
+  expect_true (nrow (result) > 1)
+  expect_true (ncol (result) == 5)
+  expect_true (sum(round(result[1,], 1) == c(0,1,3,5,10))==5)
+
+})
+
