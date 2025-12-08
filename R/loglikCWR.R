@@ -15,17 +15,18 @@
 #' @param interval After how many evenst should the population state be saved to the output matrix
 #' @param orgsimmaxcount how many CWR simulations should be performed
 #' @param totalresamp how many neutral communities should be simulated for each single CWR simulation
+#' @param tolsadisa tolerances for SADISA estimation vector of 3 values, default c(1e-06, 1e-06, 1e-06)
 #' @author Timo van Eldijk
 #' @return This function saves a .pdf plot for each CWR simulation performed, showing the distribution of likelihoods
 #' @export
 #'
 #' @examples
-#' loglikCWR(10, 0.6, 0.1, 16000,200, 0.05,0.1, 0, 0.0005, 1,1)
+#' loglikCWR(5, 0.6, 0.1, 16000,200, 0.05,0.1, 0, 0.0005, 1,1,c(1e-1, 1e-1, 1e-1))
 #'
 #'
 #'
 #'
-loglikCWR=function(tmax, b1, d1, k1,interval, b2, d2, m12, m21, orgsimmaxcount, totalresamp){
+loglikCWR=function(tmax, b1, d1, k1,interval, b2, d2, m12, m21, orgsimmaxcount, totalresamp, tolsadisa=c(1e-06, 1e-06, 1e-06)){
 
   storallloglik=data.frame()
   storalltheta=data.frame()
@@ -46,9 +47,9 @@ loglikCWR=function(tmax, b1, d1, k1,interval, b2, d2, m12, m21, orgsimmaxcount, 
     #Load sadisa library and do SADISA estimation
     initpars=c(40, 2000)
     labelpars=c(1,1)
-    pars=SADISA::SADISA_ML(abund,initpars,labelpars, model = c("pm", "dl"), mult = "mg",
-                           tol = c(1e-06, 1e-06, 1e-06), maxiter = 1000 *
-                             round((1.25)^length(which(labelpars == 1))), optimmethod = "subplex")
+    idpars = c(1,1)
+    pars=SADISA::SADISA_ML(abund,initpars,idpars,labelpars, model = c("pm", "dl"),
+                           tol = tolsadisa, maxiter = 2000, optimmethod = "subplex")
     #Store estimated parameters (on original CWR rac)
     originaltheta=pars$pars[1]
     originali=pars$pars[2]
@@ -78,9 +79,9 @@ loglikCWR=function(tmax, b1, d1, k1,interval, b2, d2, m12, m21, orgsimmaxcount, 
       #Re-estimate parameters using SADISA
       initpars=c(20, 20)
       labelpars=c(1,1)
-      comp=SADISA::SADISA_ML(simulation,initpars,labelpars, model = c("pm", "dl"), mult = "mg",
-                             tol = c(1e-09, 1e-09, 1e-09), maxiter = 1000 *
-                               round((1.25)^length(which(labelpars == 1))), optimmethod = "subplex")
+      idpars = c(1,1)
+      comp=SADISA::SADISA_ML(simulation,initpars,idpars,labelpars, model = c("pm", "dl"),
+                             tol = tolsadisa, maxiter = 2000, optimmethod = "subplex")
       saver=c(saver,comp$loglik)
       savertheta=c(savertheta,comp$pars[1])
       saveri=c(saveri,comp$pars[2])

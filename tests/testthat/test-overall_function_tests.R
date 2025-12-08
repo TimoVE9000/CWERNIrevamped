@@ -129,7 +129,7 @@ test_that("test multiCWRsimSPEC", {
 
 
 test_that("loglikCWR", {
-  loglikCWR(5, 0.6, 0.1, 16000,200, 0.05,0.1, 0, 0.0005, 1,1)
+  loglikCWR(5, 0.6, 0.1, 16000,200, 0.05,0.1, 0, 0.0005, 1,1,c(1e-1, 1e-1, 1e-1))
 
 })
 
