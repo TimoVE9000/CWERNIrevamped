@@ -125,3 +125,15 @@ test_that("test multiCWRsimSPEC", {
   expect_true(file.exists("5time_rac_CWRsim.tiff"))
   expect_true(file.exists("Trajectory_totalcommsize_CWRsim.tiff"))
 })
+
+
+
+test_that("loglikCWR", {
+  loglikCWR(5, 0.6, 0.1, 16000,200, 0.05,0.1, 0, 0.0005, 1,1,c(0.5, 0.5, 0.5))
+  expect_true(file.exists("1_gsloglik_loglik_rees_CWR.pdf"))
+  expect_true(file.exists("i_loglik_rees_CWR.csv"))
+  expect_true(file.exists("theta_loglik_rees_CWR.csv"))
+  expect_true(file.exists("loglig_loglik_rees_CWR.csv"))
+})
+
+
