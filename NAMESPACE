@@ -3,6 +3,7 @@
 export(CWRsim)
 export(CWRsimSPEC)
 export(generate_spat_abund)
+export(loglikCWR)
 export(multiCWRsim)
 export(multiCWRsimSPEC)
 export(multinulsim)

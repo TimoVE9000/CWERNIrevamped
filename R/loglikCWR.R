@@ -33,7 +33,7 @@ loglikCWR=function(tmax, b1, d1, k1,interval, b2, d2, m12, m21, orgsimmaxcount, 
   storalli=data.frame()
   orgsimcounter=1
   while (orgsimcounter<=orgsimmaxcount){
-    print("start")
+
 
     #Generate original abundance and simulate CWR
     abun_original=generate_spat_abund(theta = 200,Ivec = rep(40,1),Jvec = c(16000))
@@ -85,7 +85,7 @@ loglikCWR=function(tmax, b1, d1, k1,interval, b2, d2, m12, m21, orgsimmaxcount, 
       saver=c(saver,comp$loglik)
       savertheta=c(savertheta,comp$pars[1])
       saveri=c(saveri,comp$pars[2])
-      print(currentresamp)
+      print(paste ("Performed simulation and re-estimation number",currentresamp, Sys.time() ))
       currentresamp=currentresamp+1
     }
     #dev.off()
@@ -93,7 +93,7 @@ loglikCWR=function(tmax, b1, d1, k1,interval, b2, d2, m12, m21, orgsimmaxcount, 
 
 
     #Plot the distribution of logliklihoods
-    grDevices::pdf(paste(orgsimcounter,"gsloglik_loglik_rees_CWR.pdf"),
+    grDevices::pdf(paste(orgsimcounter,"_gsloglik_loglik_rees_CWR.pdf", sep=""),
                    width=5,
                    height=4,
                    pointsize=12)
@@ -110,8 +110,6 @@ loglikCWR=function(tmax, b1, d1, k1,interval, b2, d2, m12, m21, orgsimmaxcount, 
     storallloglik=rbind (storallloglik, thisitloglik)
     storalltheta=rbind (storalltheta, thisittheta)
     storalli=rbind (storalli, thisiti)
-
-    print (paste ("Main",orgsimcounter))
     orgsimcounter=orgsimcounter+1
   }
 
