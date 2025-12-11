@@ -8,7 +8,6 @@
 #' @param nsim number of simulations that should be performed (integer)
 #' @param interval After how many evenst should the population state be saved to the output matrix
 #' @param wantedtimes Specific timepoints for which the RAC is to be plotted
-#' @author Timo van Eldijk
 #'
 #' @return this function plots the RAC of the simulations for the times specified in Wantedtimes as .tiff files in the current working directory also writes a .csv file outputting the poplation matrix for every simulation performed
 #' @export

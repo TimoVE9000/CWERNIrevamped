@@ -14,7 +14,6 @@
 #' @param interval After how many evenst should the population state be saved to the output matrix
 #' @param orgsimmaxcount how many CWR simulations should be performed
 #' @param totalresamp how many neutral communities should be simulated for each single CWR simulation
-#' @author Timo van Eldijk
 #' @return This function saves two .pdf plots for each CWR simulation performed, showing the Reny entropy of each CWR simulation and the distribution of Reny entorpy generated from the neutral re-simulations
 #' @export
 #'

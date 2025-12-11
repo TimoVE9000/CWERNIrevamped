@@ -30,6 +30,3 @@ nulsim(10, 0.6, 0.1, 16000, generate_spat_abund(theta = 200,Ivec = rep(40,1),Jve
 
 
 }
-\author{
-Timo van Eldijk
-}

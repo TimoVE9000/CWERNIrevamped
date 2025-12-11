@@ -16,7 +16,6 @@
 #' @param orgsimmaxcount how many CWR simulations should be performed
 #' @param totalresamp how many neutral communities should be simulated for each single CWR simulation
 #' @param tolsadisa tolerances for SADISA estimation vector of 3 values, default c(1e-06, 1e-06, 1e-06)
-#' @author Timo van Eldijk
 #' @return This function saves a .pdf plot for each CWR simulation performed, showing the distribution of likelihoods
 #' @export
 #'

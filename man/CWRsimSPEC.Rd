@@ -53,6 +53,3 @@ generate_spat_abund(theta = 200,Ivec = rep(40,1),Jvec = c(16000)),
  200,c(15,30,50,75,100))
 
 }
-\author{
-Timo van Eldijk
-}

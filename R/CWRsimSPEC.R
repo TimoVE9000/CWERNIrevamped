@@ -11,7 +11,6 @@
 #' @param abun_original A vector of initial abundances for each species such as those created by generate_spat_abund
 #' @param interval After how many evenst should the population state be saved to the output matrix
 #' @param wantedtimes The preciese timepoints that should be saved
-#'@author Timo van Eldijk
 #' @return A matrix denoting the abundances of all the species in the community over time, with certain precise timpoints saved
 #' @export
 #'

@@ -13,7 +13,6 @@
 #' @param nsim The number of simulations to be performed
 #' @param wantedtimes Specific timepoints for which the RAC is to be plotted
 #' @return this function plots the RAC of the simulations for the times specified in Wantedtimes as .tiff files in the current working directory also writes a .csv file outputting the poplation matrix for every simulation performed
-#'#'@author Timo van Eldijk
 #' @return this function plots all the results of the simulations in a .tiff file in the current working directory
 #' @export
 #'
