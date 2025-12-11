@@ -1,7 +1,7 @@
 Package: CWERNIrevamped
 Type: Package
 Title: Community Wide Evolutionary Rescue Neutral Implementation revamped
-Version: 0.1.0
+Version: 1.1
 Authors@R: c(
     person(
       "Timo", "van Eldijk",
