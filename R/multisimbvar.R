@@ -14,7 +14,6 @@
 #' @param nsim number of simulations that should be performed
 #' @param filenomen the name of the plot that is saved
 #'
-#'@author Timo van Eldijk
 #' @return this function plots all the results of the simulations in a .tiff file in the current working directory
 #' @export
 #'

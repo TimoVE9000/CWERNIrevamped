@@ -137,3 +137,18 @@ test_that("loglikCWR", {
 })
 
 
+test_that("renCWR", {
+  renCWR(10, 0.6, 0.1, 16000,200, 0.05,0.1, 0, 0.0005, 1,1)
+  expect_true(file.exists("1_Ren1racs_rees_CWR.pdf"))
+  expect_true(file.exists("1_Ren2racs_rees_CWR.pdf"))
+  expect_true(file.exists("i_loglik_racs_renCWR.csv"))
+  expect_true(file.exists("theta_racs_rees_renCWR.csv"))
+  expect_true(file.exists("loglig_racs_rees_renCWR.csv"))
+
+})
+
+
+
+
+
+

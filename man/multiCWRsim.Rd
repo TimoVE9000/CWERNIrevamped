@@ -40,9 +40,7 @@ multiCWRsim(
 
 \item{nsim}{The number of simulations to be performed}
 
-\item{filenomen}{The name of the plot that is saved
-
-#'@author Timo van Eldijk}
+\item{filenomen}{The name of the plot that is saved}
 
 \item{interval}{After how many evenst should the population state be saved to the output matrix}
 }

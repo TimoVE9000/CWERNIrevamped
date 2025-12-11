@@ -32,6 +32,3 @@ nulsimSPEC(10, 0.6, 0.1, 16000, generate_spat_abund(theta = 200,Ivec = rep(40,1)
 Jvec = c(16000)), 20000000, c(1,3,5))
 
 }
-\author{
-Timo van Eldijk
-}

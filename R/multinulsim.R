@@ -9,7 +9,6 @@
 #' @param nsim number of simulations that should be performed (integer)
 #' @param filenomen the name of the plot that is saved
 #' @param interval After how many evenst should the population state be saved to the output matrix
-#' @author Timo van Eldijk
 #'
 #' @return this function plots all the results of the simulations in a .tiff file in the current working directory
 #' @export

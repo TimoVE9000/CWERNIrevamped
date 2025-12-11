@@ -8,14 +8,16 @@ Authors@R: c(
       email = "t.j.b.van.eldijk@rug.nl",
       role = c("aut", "cre")
     ),
+        person(
+      "Karen", "Bisschop",
+      role = c("aut")
+    ),
     person(
       "Rampal", "Etienne",
-      email = "",
       role = c("aut")
     )
   )
-Description: Re-make of the CWERNI r-package, improving compatibility (R 4.5) and showcasing best development practices.
-  This package, like the original simulates community wide evolutionary rescue in a neutral community (i.e. no differences between species).
+Description: The original CWERNI package was developed to simulate community wide evolutionary rescue in a neutral community. It accompanied the publication Van Eldijk, Bisschop & Etienne (2020), Uniting Community Ecology and Evolutionary Rescue Theory: Community-Wide Rescue Leads to a Rapid Loss of Rare Species, Frontiers in Ecology and Evolution, Volume 8 - 2020 (https://doi.org/10.3389/fevo.2020.552268). The goal of CWERNIrevamped is to re-make the the original package, making it compatible with R 4.5 and using best development pratices. This includes writing good documentation, proper use of git & github and adding some automated testing. 
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
