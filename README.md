@@ -18,7 +18,7 @@ pak::pak("TimoVE9000/CWERNIrevamped")
 
 ## Example
 
-This example shows how to simulate community wide rescue in a neutral community. For documentation of the other functions in the package see the [manual](https://github.com/TimoVE9000/CWERNIrevamped/manual.pdf)
+This example shows how to simulate community wide rescue in a neutral community. For further documentation on this function and other functions in the package see the [manual](https://github.com/TimoVE9000/CWERNIrevamped/blob/develop/manual.pdf)
 
 ``` r
 library(CWERNIrevamped)
@@ -27,7 +27,7 @@ library(CWERNIrevamped)
 Community = generate_spat_abund(theta = 200,Ivec = rep(40,1),Jvec = c(16000))
 
 ##Simulate 
-
+CWRsim(10,0.6 , 0.1, 0.05, 0.1, 0, 0.0005, 16000,Community,Jvec = c(16000)), 500)
 
 
 ```
