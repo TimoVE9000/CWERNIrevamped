@@ -3,6 +3,7 @@
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/TimoVE9000/CWERNIrevamped/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/TimoVE9000/CWERNIrevamped/actions/workflows/R-CMD-check.yaml)
+[![DOI](https://zenodo.org/badge/1108516617.svg)](https://doi.org/10.5281/zenodo.17899429)
 <!-- badges: end -->
 The [original CWERNI package](https://github.com/TimoVE9000/CWERNI) was developed to simulate community wide evolutionary rescue in a neutral community. It accompanied the publication: Van Eldijk, Bisschop & Etienne (2020), Uniting Community Ecology and Evolutionary Rescue Theory: Community-Wide Rescue Leads to a Rapid Loss of Rare Species, Frontiers in Ecology and Evolution, Volume 8 - 2020 [DOI](https://doi.org/10.3389/fevo.2020.552268). The goal of CWERNIrevamped is to re-make the the original package, making it compatible with R 4.5 and using best development pratices. This includes writing good documentation, proper use of git & github and adding some automated testing. 
 
